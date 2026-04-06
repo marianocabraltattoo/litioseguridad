@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LITIO | Brandboard Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-litio: #3dad55;
+            --gris-grafito: #212529;
+            --blanco-fondo: #f5f4f5;
+            --blanco-puro: #ffffff;
+            --texto-oscuro: #2a2a2a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--blanco-fondo);
+            color: var(--gris-grafito);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--gris-grafito);
+            padding: 100px 20px;
+            text-align: center;
+            color: var(--blanco-puro);
+        }
+
+        header h1 {
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: 900;
+            font-size: 4.5rem;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        header p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--verde-litio);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        section { margin-bottom: 100px; }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: ""; width: 12px; height: 12px;
+            background-color: var(--verde-litio);
+            border-radius: 50%; margin-right: 15px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* --- GRILLA DE LOGOS --- */
+        .grid-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .logo-card {
+            background: var(--blanco-puro);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(56, 56, 56, 0.1);
+            min-height: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-card:hover { transform: translateY(-5px); }
+
+        .logo-card.dark {
+            background-color: var(--verde-litio); 
+            color: var(--blanco-puro);
+        }
+
+        .logo-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* --- BOTÓN DESCARGA (COMÚN) --- */
+        .btn-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #eee;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover { background: var(--verde-litio); color: white; }
+        .dark .btn-download { background: rgba(255,255,255,0.2); color: white; }
+        .dark .btn-download:hover { background: white; color: var(--verde-litio); }
+
+        .label-tecnica {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        /* --- PALETA CROMÁTICA --- */
+        .grid-colores { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .color-box { background: var(--blanco-puro); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .muestrario { height: 120px; border-radius: 10px; margin-bottom: 15px; }
+        .hex { font-family: monospace; font-weight: 700; font-size: 1.1rem; display: block; }
+
+        /* --- TIPOGRAFÍA --- */
+        .typo-container {
+            background: var(--blanco-puro);
+            padding: 50px;
+            border-radius: 15px;
+            border-left: 10px solid var(--verde-litio);
+            color: var(--texto-oscuro); /* Cambiado a #2a2a2a vía variable */
+        }
+
+        .typo-container .fuente-principal, 
+        .typo-container .fuente-secundaria,
+        .typo-container .label-tecnica-typo {
+            color: var(--texto-oscuro); /* Asegura que todos los elementos internos usen este color */
+        }
+
+        .label-tecnica-typo { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        .fuente-principal { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3rem; }
+        .fuente-secundaria { font-family: 'Inter', sans-serif; font-size: 1.2rem; max-width: 700px; }
+
+        /* --- MOCKUP / APLICACIÓN --- */
+        .mockup-container {
+            text-align: center;
+        }
+
+        .mockup-img {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .mockup-img img {
+            width: 100%;
+            display: block;
+        }
+
+        .mockup-container .btn-download {
+            font-size: 0.8rem;
+            padding: 10px 20px;
+        }
+
+        footer { text-align: center; padding: 60px; font-weight: 700; font-size: 0.8rem; opacity: 0.4; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LITIO</h1>
+        <p> Marca Gráfica - Sistema Cromático - Tipografías - Aplicación de Marca</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>Identidad Visual</h2>
+            
+            <h3>Versiones Horizontales</h3>
+            <div class="grid-logos">
+                <div class="logo-card">
+                    <img src="img/logoprincipablanconegro.png" alt="Horizontal Positiva BN">
+                    <span class="label-tecnica">Positiva B/N</span>
+                    <a href="img/logoprincipablanconegro.png" download="Litio_H_Pos_BN.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card">
+                    <img src="img/logoprincipalverde.png" alt="Horizontal Positiva Color">
+                    <span class="label-tecnica">Positiva Color</span>
+                    <a href="img/logoprincipalverde.png" download="Litio_H_Pos_Color.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card dark">
+                    <img src="img/logoprincipanegroblanco.png" alt="Horizontal Negativa BN">
+                    <span class="label-tecnica">Negativa B/N</span>
+                    <a href="img/logoprincipanegroblanco.png" download="Litio_H_Neg_BN.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card dark">
+                    <img src="img/logoprinnegroverdecipa.png" alt="Horizontal Negativa Color">
+                    <span class="label-tecnica">Negativa Color</span>
+                    <a href="img/logoprinnegroverdecipa.png" download="Litio_H_Neg_Color.png" class="btn-download">Descargar PNG</a>
+                </div>
+            </div>
+
+            <h3>Versiones Verticales</h3>
+            <div class="grid-logos">
+                <div class="logo-card">
+                    <img src="img/verticalnblancoegro.png" alt="Vertical Positiva BN">
+                    <span class="label-tecnica">Vertical Positiva B/N</span>
+                    <a href="img/verticalnblancoegro.png" download="Litio_V_Pos_BN.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card">
+                    <img src="img/verticalverde.png" alt="Vertical Positiva Color">
+                    <span class="label-tecnica">Vertical Positiva Color</span>
+                    <a href="img/verticalverde.png" download="Litio_V_Pos_Color.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card dark">
+                    <img src="img/verticalnegroblanco.png" alt="Vertical Negativa BN">
+                    <span class="label-tecnica">Vertical Negativa B/N</span>
+                    <a href="img/verticalnegroblanco.png" download="Litio_V_Neg_BN.png" class="btn-download">Descargar PNG</a>
+                </div>
+                <div class="logo-card dark">
+                    <img src="img/verticalnegro.png" alt="Vertical Negativa Color">
+                    <span class="label-tecnica">Vertical Negativa Color</span>
+                    <a href="img/verticalnegro.png" download="Litio_V_Neg_Color.png" class="btn-download">Descargar PNG</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Paleta de Colores</h2>
+            <div class="grid-colores">
+                <div class="color-box">
+                    <div class="muestrario" style="background-color: #3dad55;"></div>
+                    <p><strong>Verde Active</strong></p>
+                    <span class="hex">#3DAD55</span>
+                </div>
+                <div class="color-box">
+                    <div class="muestrario" style="background-color: #212529;"></div>
+                    <p><strong>Gris Grafito</strong></p>
+                    <span class="hex">#212529</span>
+                </div>
+                <div class="color-box">
+                    <div class="muestrario" style="background-color: #f5f4f5; border: 1px solid #eee;"></div>
+                    <p><strong>Blanco Soft</strong></p>
+                    <span class="hex">#F5F4F5</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tipografías</h2>
+            <div class="typo-container">
+                <span class="label-tecnica-typo">Títulos y Destacados</span>
+                <h3 class="fuente-principal">Montserrat Bold</h3>
+                <span class="label-tecnica-typo" style="margin-top: 30px;">Cuerpo de Texto</span>
+                <p class="fuente-secundaria"><strong>Inter Regular:</strong> Tipografía optimizada para lectura técnica y digital.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aplicación de Marca</h2>
+            <div class="mockup-container">
+                <div class="mockup-img">
+                    <img src="img/tecnico filtro verde.png" alt="Mockup Técnico Litio en Instalación">
+                </div>
+                <a href="img/tecnico filtro verde.png" download="Litio_Mockup_Instalacion.jpg" class="btn-download">Descargar</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>Litio &copy; 2026 &bull; Buenos Aires, Argentina.</footer>
+
+</body>
+</html>
