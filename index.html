@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LITIO | Brandboard Profesional</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta property="og:title" content="LITIO | Brandboard Profesional">
+    <meta property="og:description" content="Manual de marca y descarga de activos visuales.">
+    <meta property="og:image" content="img/logoprincipalverde.png">
+    <meta name="theme-color" content="#212529">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --verde-litio: #3dad55;
@@ -79,7 +88,6 @@
             padding-bottom: 10px;
         }
 
-        /* --- GRILLA DE LOGOS --- */
         .grid-logos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -113,7 +121,6 @@
             margin-bottom: 20px;
         }
 
-        /* --- BOTÓN DESCARGA (COMÚN) --- */
         .btn-download {
             display: inline-block;
             margin-top: 15px;
@@ -141,36 +148,30 @@
             margin-bottom: 5px;
         }
 
-        /* --- PALETA CROMÁTICA --- */
         .grid-colores { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .color-box { background: var(--blanco-puro); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
         .muestrario { height: 120px; border-radius: 10px; margin-bottom: 15px; }
         .hex { font-family: monospace; font-weight: 700; font-size: 1.1rem; display: block; }
 
-        /* --- TIPOGRAFÍA --- */
         .typo-container {
             background: var(--blanco-puro);
             padding: 50px;
             border-radius: 15px;
             border-left: 10px solid var(--verde-litio);
-            color: var(--texto-oscuro); /* Cambiado a #2a2a2a vía variable */
+            color: var(--texto-oscuro);
         }
 
         .typo-container .fuente-principal, 
         .typo-container .fuente-secundaria,
         .typo-container .label-tecnica-typo {
-            color: var(--texto-oscuro); /* Asegura que todos los elementos internos usen este color */
+            color: var(--texto-oscuro);
         }
 
         .label-tecnica-typo { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 10px; }
         .fuente-principal { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3rem; }
         .fuente-secundaria { font-family: 'Inter', sans-serif; font-size: 1.2rem; max-width: 700px; }
 
-        /* --- MOCKUP / APLICACIÓN --- */
-        .mockup-container {
-            text-align: center;
-        }
-
+        .mockup-container { text-align: center; }
         .mockup-img {
             width: 100%;
             border-radius: 15px;
@@ -179,15 +180,8 @@
             margin-bottom: 20px;
         }
 
-        .mockup-img img {
-            width: 100%;
-            display: block;
-        }
-
-        .mockup-container .btn-download {
-            font-size: 0.8rem;
-            padding: 10px 20px;
-        }
+        .mockup-img img { width: 100%; display: block; }
+        .mockup-container .btn-download { font-size: 0.8rem; padding: 10px 20px; }
 
         footer { text-align: center; padding: 60px; font-weight: 700; font-size: 0.8rem; opacity: 0.4; }
     </style>
@@ -196,7 +190,7 @@
 
     <header>
         <h1>LITIO</h1>
-        <p> Marca Gráfica - Sistema Cromático - Tipografías - Aplicación de Marca</p>
+        <p>Marca Gráfica - Sistema Cromático - Tipografías - Aplicación de Marca</p>
     </header>
 
     <div class="container">
@@ -212,9 +206,9 @@
                     <a href="img/logoprincipablanconegro.png" download="Litio_H_Pos_BN.png" class="btn-download">Descargar PNG</a>
                 </div>
                 <div class="logo-card">
-                    <img src="img/logoprincipalverde.png" alt="Horizontal Positiva Color">
+                    <img src="img/principalhor.png" alt="Horizontal Positiva Color">
                     <span class="label-tecnica">Positiva Color</span>
-                    <a href="img/logoprincipalverde.png" download="Litio_H_Pos_Color.png" class="btn-download">Descargar PNG</a>
+                    <a href="img/principalhor.png" download="Litio_H_Pos_Color.png" class="btn-download">Descargar PNG</a>
                 </div>
                 <div class="logo-card dark">
                     <img src="img/logoprincipanegroblanco.png" alt="Horizontal Negativa BN">
@@ -236,9 +230,9 @@
                     <a href="img/verticalnblancoegro.png" download="Litio_V_Pos_BN.png" class="btn-download">Descargar PNG</a>
                 </div>
                 <div class="logo-card">
-                    <img src="img/verticalverde.png" alt="Vertical Positiva Color">
+                    <img src="img/principalver.png" alt="Vertical Positiva Color">
                     <span class="label-tecnica">Vertical Positiva Color</span>
-                    <a href="img/verticalverde.png" download="Litio_V_Pos_Color.png" class="btn-download">Descargar PNG</a>
+                    <a href="img/principalver.png" download="Litio_V_Pos_Color.png" class="btn-download">Descargar PNG</a>
                 </div>
                 <div class="logo-card dark">
                     <img src="img/verticalnegroblanco.png" alt="Vertical Negativa BN">
@@ -290,7 +284,7 @@
                 <div class="mockup-img">
                     <img src="img/tecnico filtro verde.png" alt="Mockup Técnico Litio en Instalación">
                 </div>
-                <a href="img/tecnico filtro verde.png" download="Litio_Mockup_Instalacion.jpg" class="btn-download">Descargar</a>
+                <a href="img/tecnico filtro verde.png" download="Litio_Mockup_Instalacion.jpg" class="btn-download">Descargar Mockup</a>
             </div>
         </section>
 
