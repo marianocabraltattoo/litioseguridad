@@ -308,6 +308,108 @@
         </section>
 
     </div>
+<style>
+        .grid-sinergia {
+            background-color: var(--blanco-puro);
+            border-radius: 20px;
+            padding: 80px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            margin-bottom: 100px;
+        }
+
+        .sinergia-header {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+        }
+
+        .sinergia-header h3 {
+            border: none;
+            padding-bottom: 0;
+            color: var(--texto-oscuro);
+            font-size: 1.6rem;
+        }
+
+        .sinergia-header p {
+            color: #666;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        .sinergia-visual-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Estilo para las tarjetas que contienen los isotipos */
+        .isotipo-card {
+            background-color: var(--blanco-fondo);
+            border-radius: 15px;
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e9e8e9;
+            transition: all 0.3s ease;
+        }
+
+        .isotipo-card:hover {
+            border-color: #ddd;
+            transform: translateY(-2px);
+        }
+
+        .isotipo-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Ajuste específico para la grilla (líneas finas) */
+        .grid-visual {
+            opacity: 0.8; /* Le da un toque más técnico */
+        }
+        
+        /* Ajuste específico para el sólido (más contraste) */
+        .solid-visual {
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        /* Responsive para celulares */
+        @media (max-width: 768px) {
+            .sinergia-visual-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .isotipo-card {
+                padding: 40px;
+            }
+        }
+    </style>
+
+    <section>
+        <h2>Retícula de Diseño</h2>
+        <div class="grid-sinergia">
+            
+            <div class="sinergia-header">
+                <h3>Sinergia Tecnológica</h3>
+                <p>El isotipo de <strong>LITIO</strong> no es casual. Su construcción se rige por un sistema concéntrico de círculos perfectos que garantizan equilibrio y simetría. Esta retícula representa la intersección entre la robustez del hardware de seguridad y la agilidad de los sistemas de inteligencia, creando un símbolo de sinergia pura.</p>
+            </div>
+
+            <div class="sinergia-visual-container">
+                <div class="isotipo-card grid-visual">
+                    <img src="img/isotipo_grid.png" alt="Retícula Técnica Constructiva del Isotipo Litio">
+                </div>
+
+                <div class="isotipo-card solid-visual">
+                    <img src="img/isotipo_solido.png" alt="Isotipo Sólido de Litio">
+                </div>
+            </div>
+        </div>
+    </section>
+  
 
     <footer>Litio &copy; 2026 &bull; Buenos Aires, Argentina.</footer>
 
